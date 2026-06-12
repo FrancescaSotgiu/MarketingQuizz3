@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing Mastery — L2a Products & Brands</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue-dark: #1a2b6d;
+    --blue-mid: #2244cc;
+    --blue-light: #4a7dff;
+    --blue-pale: #dde8ff;
+    --white: #ffffff;
+    --off-white: #f4f7ff;
+    --grey-light: #e8edf8;
+    --grey-mid: #8898bb;
+    --text-dark: #0d1b4b;
+    --text-mid: #3a4d80;
+    --correct: #1a8a4a;
+    --correct-bg: #d4f5e2;
+    --wrong: #c0392b;
+    --wrong-bg: #fde8e6;
+    --accent: #2244cc;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--off-white);
+    color: var(--text-dark);
+    min-height: 100vh;
+  }
+
+  /* ─── Particle background ─── */
+  #particles {
+    position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden;
+  }
+  .dot {
+    position: absolute; border-radius: 50%;
+    background: var(--blue-mid); opacity: 0.06;
+    animation: float linear infinite;
+  }
+  @keyframes float {
+    0%   { transform: translateY(100vh) scale(0); opacity: 0; }
+    10%  { opacity: 0.06; }
+    90%  { opacity: 0.06; }
+    100% { transform: translateY(-20px) scale(1); opacity: 0; }
+  }
+
+  /* ─── Layout wrapper ─── */
+  .screen {
+    position: relative; z-index: 1;
+    min-height: 100vh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 40px 20px;
+  }
+  .hidden { display: none !important; }
+
+  /* ─── Card ─── */
+  .card {
+    background: var(--white);
+    border-radius: 24px;
+    box-shadow: 0 4px 40px rgba(34,68,204,0.10), 0 1px 4px rgba(34,68,204,0.06);
+    padding: 48px 52px;
+    max-width: 760px;
+    width: 100%;
+  }
+
+  /* ─── Logo bar ─── */
+  .logo-bar {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 6px;
+  }
+  .logo-bar img {
+    height: 52px; object-fit: contain;
+  }
+  .logo-divider {
+    width: 1px; height: 40px; background: var(--grey-light);
+  }
+  .logo-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px; font-weight: 500; letter-spacing: .12em;
+    color: var(--grey-mid); text-transform: uppercase;
+    line-height: 1.4;
+  }
+
+  /* ─── Tag line ─── */
+  .eyebrow {
+    font-size: 11px; font-weight: 600; letter-spacing: .18em;
+    text-transform: uppercase; color: var(--blue-mid);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  /* ─── Heading ─── */
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(44px, 7vw, 72px);
+    font-weight: 800; line-height: 1.0;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+  }
+  h1 span { color: var(--blue-mid); }
+
+  h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(20px, 3.5vw, 28px);
+    font-weight: 700; color: var(--text-dark);
+    margin-bottom: 10px;
+  }
+
+  /* ─── Subtitle ─── */
+  .subtitle {
+    font-size: 16px; color: var(--text-mid);
+    line-height: 1.65; margin-bottom: 28px; max-width: 580px;
+  }
+
+  /* ─── Pill tags ─── */
+  .pill-row {
+    display: flex; flex-wrap: wrap; gap: 10px;
+    margin-bottom: 36px;
+  }
+  .pill {
+    background: var(--grey-light);
+    color: var(--text-mid);
+    font-size: 13px; font-weight: 500;
+    border-radius: 100px;
+    padding: 7px 18px;
+    display: flex; align-items: center; gap: 7px;
+  }
+
+  /* ─── Buttons ─── */
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--blue-dark);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px; font-weight: 600;
+    border: none; border-radius: 50px;
+    padding: 16px 36px;
+    cursor: pointer;
+    transition: background .2s, transform .15s, box-shadow .2s;
+    text-decoration: none;
+  }
+  .btn-primary:hover {
+    background: var(--blue-mid);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(34,68,204,.25);
+  }
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--white);
+    color: var(--blue-dark);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px; font-weight: 600;
+    border: 2px solid var(--blue-pale);
+    border-radius: 50px;
+    padding: 14px 28px;
+    cursor: pointer;
+    transition: border-color .2s, background .2s, transform .15s;
+  }
+  .btn-secondary:hover {
+    border-color: var(--blue-mid);
+    background: var(--blue-pale);
+    transform: translateY(-1px);
+  }
+
+  /* ─── Progress bar ─── */
+  .progress-wrap {
+    margin-bottom: 32px;
+  }
+  .progress-meta {
+    display: flex; justify-content: space-between;
+    font-size: 13px; font-weight: 500; color: var(--text-mid);
+    margin-bottom: 8px;
+  }
+  .progress-track {
+    background: var(--grey-light);
+    border-radius: 99px; height: 6px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%; background: var(--blue-mid);
+    border-radius: 99px;
+    transition: width .5s cubic-bezier(.4,0,.2,1);
+  }
+
+  /* ─── Question text ─── */
+  .q-label {
+    font-size: 11px; font-weight: 700; letter-spacing: .16em;
+    text-transform: uppercase; color: var(--blue-light);
+    margin-bottom: 10px;
+    display: block;
+  }
+  .q-text {
+    font-size: 19px; font-weight: 500; line-height: 1.55;
+    color: var(--text-dark);
+    margin-bottom: 28px;
+  }
+
+  /* ─── Answer choices ─── */
+  .choices { display: flex; flex-direction: column; gap: 12px; }
+  .choice {
+    background: var(--off-white);
+    border: 2px solid var(--grey-light);
+    border-radius: 14px;
+    padding: 16px 20px;
+    cursor: pointer;
+    font-size: 15px; font-weight: 400; color: var(--text-dark);
+    display: flex; align-items: flex-start; gap: 14px;
+    transition: border-color .18s, background .18s, transform .15s;
+    text-align: left; width: 100%;
+  }
+  .choice:hover:not(:disabled) {
+    border-color: var(--blue-light);
+    background: var(--blue-pale);
+    transform: translateX(4px);
+  }
+  .choice .letter {
+    min-width: 28px; height: 28px;
+    border-radius: 8px;
+    background: var(--grey-light);
+    color: var(--text-mid);
+    font-size: 12px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: background .18s, color .18s;
+    margin-top: 1px;
+  }
+  .choice.correct {
+    border-color: var(--correct);
+    background: var(--correct-bg);
+    pointer-events: none;
+  }
+  .choice.correct .letter { background: var(--correct); color: #fff; }
+  .choice.wrong {
+    border-color: var(--wrong);
+    background: var(--wrong-bg);
+    pointer-events: none;
+  }
+  .choice.wrong .letter { background: var(--wrong); color: #fff; }
+  .choice.disabled-plain { pointer-events: none; opacity: .55; }
+
+  /* ─── Explanation box ─── */
+  .explanation {
+    margin-top: 20px;
+    background: var(--blue-pale);
+    border-left: 4px solid var(--blue-mid);
+    border-radius: 12px;
+    padding: 18px 22px;
+    font-size: 14px; line-height: 1.65;
+    color: var(--text-mid);
+    animation: fadeIn .3s ease;
+  }
+  .explanation strong { color: var(--text-dark); }
+  @keyframes fadeIn { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+
+  /* ─── Case study box ─── */
+  .case-box {
+    background: linear-gradient(135deg, var(--blue-dark) 0%, #1e3a8a 100%);
+    border-radius: 18px;
+    padding: 28px 32px;
+    margin-bottom: 28px;
+    color: #fff;
+  }
+  .case-box .case-label {
+    font-size: 10px; font-weight: 700; letter-spacing: .2em;
+    text-transform: uppercase; color: rgba(255,255,255,.6);
+    margin-bottom: 8px; display: block;
+  }
+  .case-box .case-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px; font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .case-box .case-body {
+    font-size: 14px; line-height: 1.7;
+    color: rgba(255,255,255,.85);
+  }
+
+  /* ─── Lessons box ─── */
+  .lessons-box {
+    margin-top: 22px;
+    background: var(--off-white);
+    border-radius: 14px;
+    padding: 20px 24px;
+    animation: fadeIn .35s ease;
+  }
+  .lessons-box h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px; font-weight: 700;
+    color: var(--blue-dark); margin-bottom: 12px;
+    text-transform: uppercase; letter-spacing: .1em;
+  }
+  .lessons-box ol {
+    list-style: none; counter-reset: lesson;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .lessons-box li {
+    counter-increment: lesson;
+    display: flex; gap: 12px;
+    font-size: 14px; line-height: 1.55; color: var(--text-mid);
+  }
+  .lessons-box li::before {
+    content: counter(lesson);
+    min-width: 24px; height: 24px;
+    background: var(--blue-dark); color: #fff;
+    border-radius: 6px;
+    font-size: 11px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ─── Between rounds screen ─── */
+  .round-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--correct-bg);
+    color: var(--correct);
+    border-radius: 50px; padding: 8px 20px;
+    font-size: 13px; font-weight: 700;
+    margin-bottom: 24px;
+  }
+
+  /* ─── Score badge ─── */
+  .score-circle {
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    background: var(--blue-dark);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    margin: 0 auto 28px;
+    box-shadow: 0 8px 32px rgba(26,43,109,.25);
+  }
+  .score-circle .score-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 36px; font-weight: 800; color: #fff; line-height: 1;
+  }
+  .score-circle .score-den {
+    font-size: 13px; color: rgba(255,255,255,.65);
+    font-weight: 500; margin-top: 2px;
+  }
+
+  /* ─── Badge earned ─── */
+  .badge-earned {
+    text-align: center;
+    background: linear-gradient(135deg, #f0f4ff, #dde8ff);
+    border-radius: 18px; padding: 28px;
+    margin-bottom: 28px;
+  }
+  .badge-icon { font-size: 48px; margin-bottom: 8px; }
+  .badge-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px; font-weight: 800; color: var(--blue-dark);
+    margin-bottom: 6px;
+  }
+  .badge-desc { font-size: 14px; color: var(--text-mid); line-height: 1.5; }
+
+  /* ─── Review accordion ─── */
+  .review-item {
+    border: 1.5px solid var(--grey-light);
+    border-radius: 14px; overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .review-toggle {
+    width: 100%; background: none; border: none;
+    padding: 16px 22px;
+    display: flex; align-items: center; justify-content: space-between;
+    cursor: pointer;
+    font-size: 14px; font-weight: 600; color: var(--text-dark);
+    text-align: left; gap: 12px;
+  }
+  .review-toggle .rt-left { display: flex; align-items: center; gap: 10px; }
+  .review-dot {
+    width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+  }
+  .review-dot.ok { background: var(--correct); }
+  .review-dot.bad { background: var(--wrong); }
+  .review-arrow { font-size: 12px; transition: transform .2s; color: var(--grey-mid); }
+  .review-item.open .review-arrow { transform: rotate(180deg); }
+  .review-body {
+    display: none; padding: 0 22px 18px;
+    font-size: 14px; line-height: 1.65; color: var(--text-mid);
+  }
+  .review-item.open .review-body { display: block; }
+
+  /* ─── Footer ─── */
+  .footer-credit {
+    margin-top: 32px;
+    text-align: center;
+    font-size: 12px; color: var(--grey-mid);
+    line-height: 1.7;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .card { padding: 32px 24px; }
+    h1 { font-size: 38px; }
+    .score-circle { width: 96px; height: 96px; }
+    .score-circle .score-num { font-size: 28px; }
+  }
+
+  /* Transition animation */
+  .fade-in { animation: fadeIn .4s ease both; }
+</style>
+</head>
+<body>
+
+<!-- Particles -->
+<div id="particles"></div>
+
+<!-- ══════════════════════════════════════════
+     SCREEN 0 — LANDING
+══════════════════════════════════════════ -->
+<div class="screen" id="screen-landing">
+  <div class="card fade-in">
+    <div class="logo-bar">
+      <img src="https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/09d63f26-cdad-4bca-be03-1d0e7b9baf2b/VU_logo_transparant_jpg.jpg"
+           alt="VU Amsterdam logo"
+           onerror="this.style.display='none'; document.getElementById('vu-text').style.display='block'">
+      <span id="vu-text" style="display:none; font-family:Syne,sans-serif; font-weight:800; font-size:22px; color:#1a2b6d;">VU</span>
+      <div class="logo-divider"></div>
+      <div class="logo-label">PreMaster Marketing 2026<br>Vrije Universiteit Amsterdam</div>
+    </div>
+
+    <span class="eyebrow">Interactive Learning — L2a</span>
+    <h1>Marketing<br><span>Mastery</span></h1>
+
+    <p class="subtitle">
+      Round 1: 10 concept questions on Products, Brands &amp; the Product Life Cycle.<br>
+      Round 2: 5 case questions on NovaBrew, a Dutch craft coffee company.
+    </p>
+
+    <div class="pill-row">
+      <div class="pill">📦 Round 1: 10 Concept Qs</div>
+      <div class="pill">☕ Round 2: 5 NovaBrew Cases</div>
+      <div class="pill">📋 Full Solutions &amp; Key Lessons</div>
+    </div>
+
+    <button class="btn-primary" onclick="startRound1()">Start Round 1 →</button>
+
+    <div class="footer-credit" style="margin-top:28px; text-align:left;">
+      Developed by <strong>Francesca Sotgiu</strong> for the VU PreMaster Marketing course 2026
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SCREEN 1 — ROUND 1 QUIZ
+══════════════════════════════════════════ -->
+<div class="screen hidden" id="screen-r1">
+  <div class="card fade-in">
+
+    <div class="logo-bar" style="margin-bottom:20px;">
+      <img src="https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/09d63f26-cdad-4bca-be03-1d0e7b9baf2b/VU_logo_transparant_jpg.jpg"
+           alt="VU" style="height:36px;"
+           onerror="this.style.display='none'">
+      <div class="logo-divider"></div>
+      <div class="logo-label">Round 1 — Concept Questions</div>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-meta">
+        <span id="r1-q-label">Question 1 of 10</span>
+        <span id="r1-score-live">Score: 0</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="r1-bar" style="width:0%"></div></div>
+    </div>
+
+    <span class="q-label" id="r1-q-num">Q1</span>
+    <p class="q-text" id="r1-q-text"></p>
+    <div class="choices" id="r1-choices"></div>
+    <div class="explanation hidden" id="r1-explanation"></div>
+
+    <div style="display:flex; gap:12px; margin-top:28px; justify-content:flex-end;" id="r1-nav">
+      <button class="btn-primary hidden" id="r1-next-btn" onclick="r1Next()">Next →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SCREEN 2 — BETWEEN ROUNDS
+══════════════════════════════════════════ -->
+<div class="screen hidden" id="screen-between">
+  <div class="card fade-in" style="text-align:center;">
+    <img src="https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/09d63f26-cdad-4bca-be03-1d0e7b9baf2b/VU_logo_transparant_jpg.jpg"
+         alt="VU" style="height:44px; margin-bottom:20px;"
+         onerror="this.style.display='none'">
+
+    <div class="round-badge">✓ Round 1 Complete!</div>
+
+    <div class="score-circle">
+      <span class="score-num" id="between-score">0</span>
+      <span class="score-den">out of 10</span>
+    </div>
+
+    <div id="between-badge" class="badge-earned" style="display:none;">
+      <div class="badge-icon" id="between-badge-icon"></div>
+      <div class="badge-name" id="between-badge-name"></div>
+      <div class="badge-desc" id="between-badge-desc"></div>
+    </div>
+
+    <h2 style="margin-bottom:8px;">Ready for Round 2?</h2>
+    <p class="subtitle" style="margin-bottom:28px;">
+      5 applied case questions on <strong>NovaBrew</strong> — a Dutch craft coffee company navigating growth, brand strategy, and the Product Life Cycle.
+    </p>
+    <button class="btn-primary" onclick="startRound2()">Start Round 2 →</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SCREEN 3 — ROUND 2 CASES
+══════════════════════════════════════════ -->
+<div class="screen hidden" id="screen-r2">
+  <div class="card fade-in">
+
+    <div class="logo-bar" style="margin-bottom:20px;">
+      <img src="https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/09d63f26-cdad-4bca-be03-1d0e7b9baf2b/VU_logo_transparant_jpg.jpg"
+           alt="VU" style="height:36px;"
+           onerror="this.style.display='none'">
+      <div class="logo-divider"></div>
+      <div class="logo-label">Round 2 — NovaBrew Case</div>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-meta">
+        <span id="r2-q-label">Case Question 1 of 5</span>
+        <span id="r2-score-live">Score: 0</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="r2-bar" style="width:0%"></div></div>
+    </div>
+
+    <div class="case-box" id="r2-case-box">
+      <span class="case-label">☕ Mini-Case: NovaBrew</span>
+      <div class="case-title">The Dutch Craft Coffee Company</div>
+      <div class="case-body" id="r2-case-text"></div>
+    </div>
+
+    <span class="q-label" id="r2-q-num">Case Q1</span>
+    <p class="q-text" id="r2-q-text"></p>
+    <div class="choices" id="r2-choices"></div>
+    <div class="lessons-box hidden" id="r2-lessons"></div>
+
+    <div style="display:flex; gap:12px; margin-top:28px; justify-content:flex-end;">
+      <button class="btn-primary hidden" id="r2-next-btn" onclick="r2Next()">Next →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SCREEN 4 — FINAL RESULTS
+══════════════════════════════════════════ -->
+<div class="screen hidden" id="screen-results">
+  <div class="card fade-in" style="text-align:center;">
+    <img src="https://assets.vu.nl/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/09d63f26-cdad-4bca-be03-1d0e7b9baf2b/VU_logo_transparant_jpg.jpg"
+         alt="VU" style="height:44px; margin-bottom:20px;"
+         onerror="this.style.display='none'">
+
+    <span class="eyebrow">Final Results</span>
+    <h2 style="margin-bottom:24px;">Quiz Complete!</h2>
+
+    <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin-bottom:28px;">
+      <div style="text-align:center;">
+        <div class="score-circle" style="width:100px;height:100px; margin-bottom:8px;">
+          <span class="score-num" style="font-size:28px;" id="final-r1">0</span>
+          <span class="score-den">/ 10</span>
+        </div>
+        <div style="font-size:12px; font-weight:600; color:var(--text-mid);">Round 1</div>
+      </div>
+      <div style="text-align:center;">
+        <div class="score-circle" style="width:100px;height:100px; margin-bottom:8px;">
+          <span class="score-num" style="font-size:28px;" id="final-r2">0</span>
+          <span class="score-den">/ 5</span>
+        </div>
+        <div style="font-size:12px; font-weight:600; color:var(--text-mid);">Round 2</div>
+      </div>
+      <div style="text-align:center;">
+        <div class="score-circle" style="width:100px;height:100px; margin-bottom:8px; background: linear-gradient(135deg,#1a2b6d,#2244cc);">
+          <span class="score-num" style="font-size:28px;" id="final-total">0</span>
+          <span class="score-den">/ 15</span>
+        </div>
+        <div style="font-size:12px; font-weight:600; color:var(--text-mid);">Total</div>
+      </div>
+    </div>
+
+    <div class="badge-earned" id="final-badge">
+      <div class="badge-icon" id="final-badge-icon"></div>
+      <div class="badge-name" id="final-badge-name"></div>
+      <div class="badge-desc" id="final-badge-desc"></div>
+    </div>
+
+    <h3 style="font-family:Syne,sans-serif; font-size:16px; font-weight:700; text-align:left; margin-bottom:14px; color:var(--text-dark);">
+      Review Your Answers
+    </h3>
+    <div id="final-review" style="text-align:left;"></div>
+
+    <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:28px;">
+      <button class="btn-primary" onclick="restartGame()">↺ Play Again</button>
+    </div>
+
+    <div class="footer-credit">
+      Developed by <strong>Francesca Sotgiu</strong> for the VU PreMaster Marketing course 2026
+    </div>
+  </div>
+</div>
+
+<script>
+// ─────────────────────────────────────────
+//  PARTICLE BACKGROUND
+// ─────────────────────────────────────────
+(function() {
+  const el = document.getElementById('particles');
+  for (let i = 0; i < 18; i++) {
+    const d = document.createElement('div');
+    d.className = 'dot';
+    const size = Math.random() * 80 + 20;
+    d.style.cssText = `
+      width:${size}px; height:${size}px;
+      left:${Math.random()*100}%;
+      animation-duration:${Math.random()*20+12}s;
+      animation-delay:${Math.random()*-25}s;
+    `;
+    el.appendChild(d);
+  }
+})();
+
+// ─────────────────────────────────────────
+//  DATA — ROUND 1 (10 concept questions)
+// ─────────────────────────────────────────
+const r1Questions = [
+  {
+    q: "How does the definition of a 'product' in marketing extend beyond physical goods?",
+    choices: [
+      "A product is only a physical object you can hold or touch.",
+      "A product is anything offered in a market that might satisfy a need — including services and experiences.",
+      "A product is defined exclusively by its price and distribution channel.",
+      "A product is synonymous with a service; the two terms are interchangeable."
+    ],
+    correct: 1,
+    explanation: "In marketing, a product is <strong>anything that can be offered to satisfy a need or want</strong>: physical goods, services, experiences, events, persons, places, organisations, or ideas. This matters because competing on <em>experience</em> is much harder to imitate than competing on physical features or price."
+  },
+  {
+    q: "What is the difference between 'line stretching' and 'line filling' in product line decisions?",
+    choices: [
+      "Line stretching = adding items within the existing price range; line filling = moving outside the existing range.",
+      "Line stretching = extending outside the current range (up, down, or both); line filling = adding items within the existing range to close gaps.",
+      "Both terms describe the same strategy: launching new product categories.",
+      "Line stretching refers to packaging changes; line filling refers to brand extensions."
+    ],
+    correct: 1,
+    explanation: "<strong>Line stretching</strong> moves the line outside its current range — upward (adding premium items, e.g. Toyota → Lexus) or downward (adding budget items). <strong>Line filling</strong> adds more items <em>within</em> the existing range to close gaps — e.g. a shampoo brand adding a variant for coloured hair."
+  },
+  {
+    q: "Which of the following best describes the 'depth' dimension of a product mix?",
+    choices: [
+      "The total number of items across all product lines.",
+      "The number of different product lines a company offers.",
+      "The number of variants (sizes, flavours, etc.) within a single product in a product line.",
+      "How closely related the product lines are in terms of production or distribution."
+    ],
+    correct: 2,
+    explanation: "Product mix dimensions: <strong>Width</strong> = number of lines; <strong>Length</strong> = total items across all lines; <strong>Depth</strong> = variants within a single product (e.g. Colgate Total White, Triple Action, Kids); <strong>Consistency</strong> = how closely related the lines are."
+  },
+  {
+    q: "What is 'brand equity', and why does it matter strategically?",
+    choices: [
+      "Brand equity is the total financial value of a brand as reported on a balance sheet.",
+      "Brand equity is the differential effect that knowing the brand name has on customer response — it reflects perception and loyalty.",
+      "Brand equity only matters for luxury brands; commodity brands do not need it.",
+      "Brand equity is identical to brand value and is always measured in currency."
+    ],
+    correct: 1,
+    explanation: "<strong>Brand equity</strong> is the <em>differential effect</em> that brand knowledge has on customer response. High brand equity means customers respond more favourably to a branded offer than to an unbranded one. Strategically it reduces price sensitivity, builds loyalty, and prevents the brand from competing solely on price."
+  },
+  {
+    q: "Kotler (2012) states: 'When something is not a brand, it will probably be viewed as a commodity. Then price is what counts.' What is the strategic implication?",
+    choices: [
+      "Companies without brands should compete by cutting costs to the minimum possible level.",
+      "All products are inherently commodities, so price should always be the main focus.",
+      "Failing to build a brand forces companies into pure price competition — branding creates differentiation that justifies premiums.",
+      "Brand investment is only justified once a product reaches the maturity stage of the PLC."
+    ],
+    correct: 2,
+    explanation: "Without a brand, customers have no reason to prefer one product over another — they choose the cheapest. <strong>Branding creates differentiation, emotional connection, and perceived value</strong>, allowing companies to charge a premium and build loyalty. Brand investment is therefore a core competitive necessity, not optional."
+  },
+  {
+    q: "Which of the four brand development strategies involves using an EXISTING brand name in a NEW product category?",
+    choices: [
+      "Line extension",
+      "Multibrands",
+      "Brand extension",
+      "New brands"
+    ],
+    correct: 2,
+    explanation: "<strong>Brand extension</strong> = existing brand name + new product category (e.g. Apple Watch under the Apple brand). <em>Line extension</em> keeps the existing brand in the same category. <em>Multibrands</em> = new brand name in the existing market. <em>New brands</em> = new brand name in a new market."
+  },
+  {
+    q: "In which stage of the Product Life Cycle (PLC) do profits typically PEAK — and why?",
+    choices: [
+      "Introduction — because there are no competitors yet.",
+      "Growth — because sales rise fast and competition is still limited.",
+      "Maturity — because sales volume is highest.",
+      "Decline — because cost-cutting improves margins."
+    ],
+    correct: 1,
+    explanation: "Profits typically peak in the <strong>Growth stage</strong>, when sales are rising rapidly but competitive pressure has not yet fully eroded margins. In <em>Maturity</em>, intense competition forces price cuts and higher spending, squeezing profits even though sales volume is at its peak."
+  },
+  {
+    q: "Which atypical PLC pattern is described as 'a series of successive life cycles driven by new uses, users, or features'?",
+    choices: [
+      "Growth-slump-maturity",
+      "Cycle-recycle",
+      "Scalloped",
+      "Reverse-J"
+    ],
+    correct: 2,
+    explanation: "The <strong>Scalloped pattern</strong> shows successive cycles as a product finds new applications, users, or features — classic examples include nylon (first used in toothbrush bristles, then stockings, then many other uses). <em>Cycle-recycle</em> is a second growth wave from a marketing push. <em>Growth-slump-maturity</em> follows an initial hype then plateau."
+  },
+  {
+    q: "A product in the maturity stage can pursue three types of modification strategies. Which of the following is an example of 'modify the market'?",
+    choices: [
+      "Changing the product formula to add a new functional ingredient.",
+      "Running a loyalty programme to re-engage existing customers.",
+      "Marketing baking soda as a refrigerator deodorant to attract new users.",
+      "Reducing the retail price to attract price-sensitive segments."
+    ],
+    correct: 2,
+    explanation: "<strong>Modify the market</strong> means finding <em>new users or new uses</em> for the existing product — e.g. Arm &amp; Hammer marketing baking soda for fridge odour removal. <em>Modify the product</em> changes quality/features/style. <em>Modify the marketing mix</em> adjusts price, distribution, or promotion."
+  },
+  {
+    q: "How do convenience products and specialty products differ in terms of buying behaviour and distribution?",
+    choices: [
+      "Convenience products require extensive comparison shopping; specialty products are bought on impulse.",
+      "Convenience products are bought frequently with minimal effort and need wide distribution; specialty products are unique, brand-specific items requiring special purchase effort and more selective distribution.",
+      "Both types require wide distribution but differ only in price.",
+      "Specialty products are unsought goods that require aggressive promotion."
+    ],
+    correct: 1,
+    explanation: "<strong>Convenience products</strong> (e.g. soap, snacks): frequent, low-effort purchases → need <em>wide (intensive) distribution</em>. <strong>Specialty products</strong> (e.g. Rolex, luxury cars): unique brand characteristics the buyer is willing to make special effort for → <em>selective distribution</em> and minimal price promotion."
+  }
+];
+
+// ─────────────────────────────────────────
+//  DATA — ROUND 2 (5 NovaBrew case Qs)
+// ─────────────────────────────────────────
+const novaCaseTexts = [
+  "NovaBrew is a Dutch craft coffee company founded in 2018. Its original cold brew was positioned not just as coffee but as <em>'a moment of urban calm'</em> — targeting Amsterdam's specialty-store segment with a premium, artisanal experience.",
+  "By 2021, NovaBrew expanded to hot brew, flavoured variants, sparkling canned coffee, and a budget sub-brand 'DailyBrew' sold in supermarkets. Sales grew until 2023, when growth flattened. Competitors entered the premium cold brew segment.",
+  "In 2023, NovaBrew's cold brew sales growth has stalled. Multiple competitors now offer similar products in the premium cold brew segment. The product has been on the market since 2018.",
+  "The marketing team wants to revitalise the original cold brew and is considering three types of modification strategies: modify the market, modify the product, and modify the marketing mix.",
+  "DailyBrew sits on crowded supermarket shelves alongside private-label coffees. It struggles to command any price premium. Customers treat it like any other budget coffee — they simply pick the cheapest option."
+];
+
+const r2Questions = [
+  {
+    q: "NovaBrew sold 'a moment of urban calm' rather than just coffee. Which product concept does this reflect?",
+    choices: [
+      "A physical product — it is still just a jar of cold brew.",
+      "A pure service — because the value is intangible.",
+      "An experience — the company creates and manages a holistic customer interaction with the brand.",
+      "An augmented product — because it comes with a guarantee."
+    ],
+    correct: 2,
+    explanation: "NovaBrew is selling an <strong>experience</strong>. As products and services become commoditised, companies that create and manage customer <em>experiences</em> gain a competitive advantage that is much harder for rivals to replicate. Anchoring to an emotional/lifestyle benefit ('urban calm') differentiates from commodity coffee and justifies a premium.",
+    lessons: [
+      "Products can be physical objects, services, or full experiences — each layer is harder to copy.",
+      "Positioning on an emotional or lifestyle benefit creates differentiation that price alone cannot undermine.",
+      "The richer the experience layer, the stronger the insulation from commodity competition."
+    ]
+  },
+  {
+    q: "NovaBrew added hot brew, flavoured variants, sparkling coffee, and a separate 'DailyBrew' sub-brand. How should this expansion be classified?",
+    choices: [
+      "All additions are line extensions, because they all involve coffee.",
+      "Adding variants within the coffee category = line filling; DailyBrew as a separate brand = multibrand strategy.",
+      "Adding DailyBrew is a brand extension because it enters a new product category.",
+      "This represents a new brands strategy — NovaBrew should have avoided using the same parent brand."
+    ],
+    correct: 1,
+    explanation: "Adding hot brew, flavours, and sparkling coffee within the same category = <strong>line filling</strong> (closing gaps in the line). Launching <strong>DailyBrew</strong> under a separate brand name in the same market (coffee drinkers) = <strong>multibrand strategy</strong>. In product mix terms, NovaBrew increased its <em>depth</em> (more variants) and <em>length</em> (more total items).",
+    lessons: [
+      "Line filling adds items within the existing range to cover unserved needs.",
+      "A multibrand strategy uses different brand names to target different segments without risking the master brand.",
+      "Increasing product mix depth raises complexity — companies must manage cannibalisation risk."
+    ]
+  },
+  {
+    q: "Based on the evidence in the case, which stage of the Product Life Cycle is NovaBrew's cold brew in as of 2023?",
+    choices: [
+      "Introduction — the product is still relatively new.",
+      "Growth — competitors entering signals a growth market.",
+      "Maturity — sales growth has flattened and competition has intensified.",
+      "Decline — the product should be discontinued."
+    ],
+    correct: 2,
+    explanation: "NovaBrew's cold brew is in the <strong>Maturity stage</strong>. Evidence: (1) sales growth has <em>flattened</em>; (2) <em>competitors have entered</em> the premium cold brew segment, intensifying competition; (3) the product has been on the market since 2018 — enough time to move through introduction and growth. In maturity, profits are under pressure and active management is required.",
+    lessons: [
+      "Flat sales growth combined with new competitive entrants are the hallmark signs of maturity.",
+      "Time alone does not determine PLC stage — look for the market and competitive evidence.",
+      "The maturity stage requires deliberate strategic choices, not passive maintenance."
+    ]
+  },
+  {
+    q: "Which of the following best represents a 'modify the product' strategy for NovaBrew's cold brew?",
+    choices: [
+      "Partnering with gyms to position cold brew as a post-workout drink (new users).",
+      "Launching a loyalty programme and targeted digital campaign (promotion adjustment).",
+      "Introducing a functional variant with adaptogens or vitamins to refresh the product.",
+      "Expanding into hotel minibars and corporate office subscriptions (new distribution)."
+    ],
+    correct: 2,
+    explanation: "<strong>Modify the product</strong> = changing quality, features, or style (e.g. adding adaptogens creates a 'news hook' and refreshes the offering). <em>Partnering with gyms</em> = modify the market (new users). <em>Loyalty programme / digital campaign</em> = modify the marketing mix (promotion). <em>Hotel minibars / corporate subscriptions</em> = modify the marketing mix (distribution).",
+    lessons: [
+      "Product modification creates genuine news and can restart a cycle of consumer interest.",
+      "Functional ingredients (adaptogens, vitamins) allow repositioning without abandoning brand equity.",
+      "All three modification strategies (market, product, mix) should be considered together, not in isolation."
+    ]
+  },
+  {
+    q: "DailyBrew is being treated as a commodity on supermarket shelves. Applying Kotler's argument, what is the ROOT CAUSE of this problem?",
+    choices: [
+      "DailyBrew's price is too high relative to private-label competitors.",
+      "DailyBrew lacks strong brand equity — customers have no differential perception, so they choose on price alone.",
+      "NovaBrew should not have entered the supermarket channel at all.",
+      "Supermarkets always turn products into commodities, so brand building is impossible there."
+    ],
+    correct: 1,
+    explanation: "DailyBrew exemplifies Kotler's warning: <strong>without strong brand equity, a product is a commodity</strong>. Customers have no differential perception of DailyBrew vs. private-label, so price becomes the only decision criterion. The fix: (1) build a clear brand identity ('everyday quality without compromise'), (2) invest in packaging and in-store visibility, (3) use digital/social to build emotional connection — shifting customers from <em>price-driven</em> to <em>brand-driven</em> choice.",
+    lessons: [
+      "Low brand equity = commodity pricing. Brand equity is the only sustainable defence against private-label competition.",
+      "A clear brand identity gives customers a reason to pay a premium beyond the product's physical attributes.",
+      "In-store packaging is the last metre of brand communication — it is disproportionately impactful in supermarkets."
+    ]
+  }
+];
+
+// ─────────────────────────────────────────
+//  BADGES
+// ─────────────────────────────────────────
+function getBadge(score, max) {
+  const pct = score / max;
+  if (pct >= 0.93) return { icon: '🏆', name: 'CMO Material', desc: 'Exceptional mastery of marketing theory and application.' };
+  if (pct >= 0.80) return { icon: '⭐', name: 'Marketing Maven', desc: 'Strong command across concepts and case analysis.' };
+  if (pct >= 0.60) return { icon: '📈', name: 'Brand Strategist', desc: 'Solid understanding with some areas to revisit.' };
+  return { icon: '📚', name: 'Marketing Rookie', desc: 'Good start — review the lecture notes and try again!' };
+}
+
+// ─────────────────────────────────────────
+//  STATE
+// ─────────────────────────────────────────
+let r1Idx = 0, r1Score = 0, r1Results = [];
+let r2Idx = 0, r2Score = 0, r2Results = [];
+const LETTERS = ['A','B','C','D'];
+
+// ─────────────────────────────────────────
+//  UTILITIES
+// ─────────────────────────────────────────
+function showScreen(id) {
+  ['screen-landing','screen-r1','screen-between','screen-r2','screen-results']
+    .forEach(s => document.getElementById(s).classList.add('hidden'));
+  const el = document.getElementById(id);
+  el.classList.remove('hidden');
+  el.querySelector('.card').classList.remove('fade-in');
+  void el.querySelector('.card').offsetWidth;
+  el.querySelector('.card').classList.add('fade-in');
+  window.scrollTo(0,0);
+}
+
+// ─────────────────────────────────────────
+//  ROUND 1
+// ─────────────────────────────────────────
+function startRound1() {
+  r1Idx = 0; r1Score = 0; r1Results = [];
+  showScreen('screen-r1');
+  renderR1();
+}
+
+function renderR1() {
+  const q = r1Questions[r1Idx];
+  document.getElementById('r1-q-label').textContent = `Question ${r1Idx+1} of 10`;
+  document.getElementById('r1-score-live').textContent = `Score: ${r1Score}`;
+  document.getElementById('r1-bar').style.width = `${(r1Idx/10)*100}%`;
+  document.getElementById('r1-q-num').textContent = `Q${r1Idx+1}`;
+  document.getElementById('r1-q-text').textContent = q.q;
+  document.getElementById('r1-explanation').classList.add('hidden');
+  document.getElementById('r1-explanation').innerHTML = '';
+  document.getElementById('r1-next-btn').classList.add('hidden');
+
+  const ch = document.getElementById('r1-choices');
+  ch.innerHTML = '';
+  q.choices.forEach((c, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'choice';
+    btn.innerHTML = `<span class="letter">${LETTERS[i]}</span><span>${c}</span>`;
+    btn.onclick = () => answerR1(i, btn);
+    ch.appendChild(btn);
+  });
+}
+
+function answerR1(idx, btn) {
+  const q = r1Questions[r1Idx];
+  const allChoices = document.querySelectorAll('#r1-choices .choice');
+  allChoices.forEach((c, i) => {
+    if (i === q.correct) c.classList.add('correct');
+    else if (i === idx && idx !== q.correct) c.classList.add('wrong');
+    else c.classList.add('disabled-plain');
+  });
+
+  const correct = idx === q.correct;
+  if (correct) r1Score++;
+  r1Results.push({ q: q.q, correct, userIdx: idx, correctIdx: q.correct,
+    userAns: q.choices[idx], correctAns: q.choices[q.correct], expl: q.explanation });
+
+  const expl = document.getElementById('r1-explanation');
+  expl.innerHTML = (correct
+    ? `<strong>✓ Correct!</strong> ` : `<strong>✗ Not quite.</strong> `) + q.explanation;
+  expl.classList.remove('hidden');
+
+  document.getElementById('r1-score-live').textContent = `Score: ${r1Score}`;
+  document.getElementById('r1-next-btn').classList.remove('hidden');
+  document.getElementById('r1-next-btn').textContent = r1Idx < 9 ? 'Next →' : 'See Round 1 Results →';
+}
+
+function r1Next() {
+  r1Idx++;
+  if (r1Idx < 10) { renderR1(); }
+  else { showBetween(); }
+}
+
+// ─────────────────────────────────────────
+//  BETWEEN ROUNDS
+// ─────────────────────────────────────────
+function showBetween() {
+  document.getElementById('between-score').textContent = r1Score;
+  const b = getBadge(r1Score, 10);
+  const bdg = document.getElementById('between-badge');
+  bdg.style.display = 'block';
+  document.getElementById('between-badge-icon').textContent = b.icon;
+  document.getElementById('between-badge-name').textContent = b.name;
+  document.getElementById('between-badge-desc').textContent = b.desc;
+  showScreen('screen-between');
+}
+
+// ─────────────────────────────────────────
+//  ROUND 2
+// ─────────────────────────────────────────
+function startRound2() {
+  r2Idx = 0; r2Score = 0; r2Results = [];
+  showScreen('screen-r2');
+  renderR2();
+}
+
+function renderR2() {
+  const q = r2Questions[r2Idx];
+  document.getElementById('r2-q-label').textContent = `Case Question ${r2Idx+1} of 5`;
+  document.getElementById('r2-score-live').textContent = `Score: ${r2Score}`;
+  document.getElementById('r2-bar').style.width = `${(r2Idx/5)*100}%`;
+  document.getElementById('r2-q-num').textContent = `Case Q${r2Idx+1}`;
+  document.getElementById('r2-q-text').textContent = q.q;
+  document.getElementById('r2-case-text').innerHTML = novaCaseTexts[r2Idx];
+  document.getElementById('r2-lessons').classList.add('hidden');
+  document.getElementById('r2-lessons').innerHTML = '';
+  document.getElementById('r2-next-btn').classList.add('hidden');
+
+  const ch = document.getElementById('r2-choices');
+  ch.innerHTML = '';
+  q.choices.forEach((c, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'choice';
+    btn.innerHTML = `<span class="letter">${LETTERS[i]}</span><span>${c}</span>`;
+    btn.onclick = () => answerR2(i, btn);
+    ch.appendChild(btn);
+  });
+}
+
+function answerR2(idx, btn) {
+  const q = r2Questions[r2Idx];
+  const allChoices = document.querySelectorAll('#r2-choices .choice');
+  allChoices.forEach((c, i) => {
+    if (i === q.correct) c.classList.add('correct');
+    else if (i === idx && idx !== q.correct) c.classList.add('wrong');
+    else c.classList.add('disabled-plain');
+  });
+
+  const correct = idx === q.correct;
+  if (correct) r2Score++;
+  r2Results.push({ q: q.q, correct, userIdx: idx, correctIdx: q.correct,
+    userAns: q.choices[idx], correctAns: q.choices[q.correct], expl: q.explanation });
+
+  document.getElementById('r2-score-live').textContent = `Score: ${r2Score}`;
+
+  // Show lessons
+  const lb = document.getElementById('r2-lessons');
+  lb.innerHTML = `
+    <h4>Key Lessons</h4>
+    <div style="margin-bottom:12px; font-size:14px; color:var(--text-mid);">${correct ? '<strong style="color:var(--correct)">✓ Correct!</strong>' : '<strong style="color:var(--wrong)">✗ Not quite.</strong>'} ${q.explanation}</div>
+    <ol>${q.lessons.map(l => `<li>${l}</li>`).join('')}</ol>
+  `;
+  lb.classList.remove('hidden');
+
+  document.getElementById('r2-next-btn').classList.remove('hidden');
+  document.getElementById('r2-next-btn').textContent = r2Idx < 4 ? 'Next →' : 'See Final Results →';
+}
+
+function r2Next() {
+  r2Idx++;
+  if (r2Idx < 5) { renderR2(); }
+  else { showResults(); }
+}
+
+// ─────────────────────────────────────────
+//  FINAL RESULTS
+// ─────────────────────────────────────────
+function showResults() {
+  const total = r1Score + r2Score;
+  document.getElementById('final-r1').textContent = r1Score;
+  document.getElementById('final-r2').textContent = r2Score;
+  document.getElementById('final-total').textContent = total;
+
+  const b = getBadge(total, 15);
+  document.getElementById('final-badge-icon').textContent = b.icon;
+  document.getElementById('final-badge-name').textContent = b.name;
+  document.getElementById('final-badge-desc').textContent = b.desc;
+
+  // Review
+  const rv = document.getElementById('final-review');
+  rv.innerHTML = '';
+
+  const allResults = [
+    ...r1Results.map((r,i) => ({ ...r, label: `R1 Q${i+1}` })),
+    ...r2Results.map((r,i) => ({ ...r, label: `R2 Case Q${i+1}` }))
+  ];
+
+  allResults.forEach((r, i) => {
+    const item = document.createElement('div');
+    item.className = 'review-item';
+    item.innerHTML = `
+      <button class="review-toggle" onclick="toggleReview(${i})">
+        <span class="rt-left">
+          <span class="review-dot ${r.correct ? 'ok' : 'bad'}"></span>
+          <span><strong>${r.label}:</strong> ${r.q.slice(0,70)}${r.q.length>70?'…':''}</span>
+        </span>
+        <span class="review-arrow" id="ra-${i}">▼</span>
+      </button>
+      <div class="review-body" id="rb-${i}">
+        ${!r.correct ? `<p style="margin-bottom:8px;"><strong style="color:var(--wrong)">Your answer:</strong> ${r.userAns}</p>` : ''}
+        <p style="margin-bottom:8px;"><strong style="color:var(--correct)">Correct answer:</strong> ${r.correctAns}</p>
+        <p style="font-size:13px; color:var(--text-mid);">${r.expl}</p>
+      </div>
+    `;
+    rv.appendChild(item);
+  });
+
+  showScreen('screen-results');
+}
+
+function toggleReview(i) {
+  const item = document.getElementById(`rb-${i}`).closest('.review-item');
+  item.classList.toggle('open');
+}
+
+function restartGame() {
+  r1Idx=0; r1Score=0; r1Results=[];
+  r2Idx=0; r2Score=0; r2Results=[];
+  showScreen('screen-landing');
+}
+</script>
+</body>
+</html>
